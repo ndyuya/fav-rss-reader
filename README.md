@@ -11,10 +11,10 @@ MonacaのRSSリーダーのサンプルをベースに、ニフティクラウ�
 ## See
 
 * Monaca
-** https://ja.monaca.io/
+  * https://ja.monaca.io/
 * ニフティクラウドmobile backend
-** http://mb.cloud.nifty.com/
+  * http://mb.cloud.nifty.com/
 * MonacaのRSSリーダーのサンプル
-** https://github.com/monaca/project-templates/tree/master/2-rss
-** http://docs.monaca.mobi/cur/ja/sampleapp/samples/sample_rss_reader/
+  * https://github.com/monaca/project-templates/tree/master/2-rss
+  * http://docs.monaca.mobi/cur/ja/sampleapp/samples/sample_rss_reader/
 
