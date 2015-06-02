@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="js/feed-reader.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/ncmb-latest.min.js"></script>
+    <script src="js/favorite.js"></script>
+    <link rel="stylesheet" href="css/favorite.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <script>
+    // CHANGE YOUR URL HERE!
+    var feedUrl = "http://iot.mb.cloud.nifty.com/iotcolumn/rss.xml"
+
+    $(function() {
+        var favorite = new Favorite({
+            applicationKey: 'YOUR_NCMB_APPLICATION_KEY',
+            clientKey: 'YOUR_NCMB_CLIENT_KEY'
+        });
+        
+        var feed = new Feed({
+            url: feedUrl,
+            favorite: favorite
+        });
+            
+        if (monaca.isIOS) {
+            $('.toolbar').css('margin-top', '20px');
+            $('.button').css('top', '20px');
+        }
+        
+        $('.button').click(function() {
+          console.log('Reload.');
+          feed.load();
+        });
+        
+        feed.load();
+        
+    });
+    
+</script>
+</head>
+<body>
+<div class="toolbar">
+        <h2>RSS Reader</h2>
+        <div class="button">Reload</div>
+    </div>
+      
+    <div id="mask">
+      <div id="loading"><img src="loading.gif"></div>
+    </div>
+
+    <ul id="feed-list"></ul>
+    <p id="error-message"></p>
+</body>
+</html>

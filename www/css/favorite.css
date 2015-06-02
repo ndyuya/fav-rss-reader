@@ -1,0 +1,9 @@
+.feed-item .fa-star,.fa-star-o {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.feed-item .fa-star {
+    color: GoldenRod;
+}
