@@ -1,0 +1,2 @@
+# fav-rss-reader
+MonacaのRSSリーダーのサンプルをベースに、ニフティクラウドmobile backendを使ったお気に入り機能を実装したRSSリーダー
